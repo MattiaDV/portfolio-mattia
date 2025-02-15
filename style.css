@@ -108,4 +108,15 @@ input[type = "range"]::-webkit-slider-thumb {
     .cardLang {
         width: calc(100%);
     }
+
+    .imageMale {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        opacity: 30%;
+    }
+
+    body, html {
+        overflow-x: hidden;
+    }
 }
