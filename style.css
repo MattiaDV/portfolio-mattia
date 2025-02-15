@@ -11,6 +11,7 @@
     --background-page: #424242;
     --shadow: #747474;
     --green: rgb(166, 255, 166);
+    --weight-gray: #272727;
 }
 
 body, html {
@@ -28,6 +29,68 @@ body, html {
 .redTitle {
     color: var(--background-page);
     font-weight: 800;
+}
+
+.PersonalDatas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    max-width: 50%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.fotoPersonale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.experienceWork {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience {
+    width: 100%;
+    padding: 20px;
+    background: var(--color-white);
+    border-radius: 26px;
+}
+
+.experience details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.titleEx {
+    color: rgb(100, 100, 100) !important;
+}
+
+.experience details summary {
+    font-size: 24px;
+    color: var(--color-gray);
+}
+
+.experience details span {
+    color: #c1c1c1;
+    font-size: 18px;
+}
+
+.titlePage {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .objectNavbar {
@@ -104,6 +167,19 @@ input[type = "range"]::-webkit-slider-thumb {
     font-weight: 600;
 }
 
+.fotoPersonale {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.fotoPersonale img {
+    min-width: 30%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 16px var(--shadow);
+}
+
 @media screen and (max-width: 600px) {
     .cardLang {
         width: calc(100%);
@@ -114,6 +190,22 @@ input[type = "range"]::-webkit-slider-thumb {
         top: 40px;
         left: 40px;
         opacity: 30%;
+    }
+
+    .fotoPersonale {
+        flex-direction: column-reverse;
+    }
+
+    .PersonalDatas {
+        margin-top: 20px;
+    }
+
+    .PersonalDatas span {
+        font-size: 16px;
+    }
+
+    .fotoPersonale img {
+        max-width: 70%;
     }
 
     body, html {

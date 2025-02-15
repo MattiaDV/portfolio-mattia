@@ -27,6 +27,71 @@
             );
         }
 
+        function EsperienzeLavorative() {
+            let experience = [
+                {
+                    name: 'Studio privato a Nuoro',
+                    details: 'WebDeveloper per uno studio privato - Nuoro (08100)',
+                    occupation: 'Front-end developer con Wix studio e codice',
+                    start: "11/2020",
+                    end: "12/2022"
+                },
+                {
+                    name: 'CAMS S.R.L. (Torino)',
+                    details: "WebDeveloper presso l'azienda CAMS SRL - Torino",
+                    occupation: 'Front-end developer con WordPress, sviluppo di software con html, js, css, php e MySQL',
+                    start: "02/2023",
+                    end: "11/2023"
+                },
+                {
+                    name: 'MYNDO S.R.L. (Milano)',
+                    details: "WebDeveloper presso l'azienda MYNDO SRL - Milano",
+                    occupation: 'Front-end e Back-end developer, sviluppo di software con html, js, css, XML, python, NodeJS ed Express',
+                    start: "11/2024",
+                    end: "Attuale"
+                },
+                {
+                    name: 'IfThenElse Agency (Personale)',
+                    details: "WebDeveloping",
+                    occupation: 'Azienda personale dove offro servizi di web developing e modifiche a siti web',
+                    start: "11/2024",
+                    end: "Attuale"
+                }
+            ];
+
+            return (
+                <div className = "experienceWork">
+                    {
+                        experience.map(ex => (
+                            <div className = "experience">
+                                <details>
+                                    <summary>{ex.name}</summary>
+                                    <span className = "expDet"><span className = "titleEx">DETTAGLI:</span> {ex.details}</span><br />
+                                    <span className = "expOcc"><span className = "titleEx">OCCUPAZIONE:</span> {ex.occupation}</span><br />
+                                    <span className = "expSta"><span className = "titleEx">DURATA:</span> {ex.start} - {ex.end}</span><br />
+                                </details>
+                            </div>
+                        ))
+                    }
+                </div>
+            )
+        }
+
+        function FotoMia() {
+            return (
+                <div className = "fotoPersonale">
+                    <div className = "PersonalDatas">
+                        <span className = "titlePage">Mattia De Vincentis</span>
+                        <span className = "titlePage">25/01/2005</span>
+                        <span className = "titlePage">4 Anni nel settore della programmazione di siti web</span>
+                    </div>
+                    <img 
+                        src = "./img/foto.jpg"
+                    />
+                </div>
+            )
+        }
+
         function Languages() {
             let lang = [
                 {
@@ -178,6 +243,8 @@
             return (
                 <div>
                     <Navbar />
+                    <FotoMia />
+                    <EsperienzeLavorative />
                     <Languages />
                     <FrameWork />
                     <BackEnd />
