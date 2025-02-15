@@ -82,6 +82,7 @@ input[type = "range"]::-webkit-slider-thumb {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .AllPartFronEnd {
@@ -95,7 +96,6 @@ input[type = "range"]::-webkit-slider-thumb {
     flex-direction: column;
     color: white;
     padding: 20px;
-    box-shadow: 0px 2px 6px var(--shadow);
     border-radius: 25px;
 }
 
