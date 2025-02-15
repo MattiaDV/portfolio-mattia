@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - React senza Build</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        function Navbar() {
+            return (
+                <div className="navbar">
+                    <ul className = "objectNavbar">
+                        <li><span className="titlePage">Portfolio <span className = "redTitle">MDV</span></span></li>
+                    </ul>
+                </div>
+            );
+        }
+
+        function Languages() {
+            let lang = [
+                {
+                    name: 'HTML',
+                    level: 90,
+                    description: "Strutturazione della pagina web"
+                },
+                {
+                    name: 'CSS3',
+                    level: 90,
+                    description: "Strutturazione dello stile della pagina web"
+                },
+                {
+                    name: 'JavaScript',
+                    level: 75,
+                    description: "Strutturazione delle funzionalità della pagina web"
+                }
+            ];
+
+            return (
+                <div className = "AllPartFronEnd">
+                    <h1>FrontEnd Languages</h1>
+                    <div className = "frontEndLanguages">
+                        {
+                            lang.map(a => (
+                                <div className = "cardLang">
+                                    <span className = "nameLang">{a.name}</span>
+                                    <span className = "descriptionLang">{a.description}</span>
+                                    <input 
+                                    type = "range" 
+                                    value = {a.level} 
+                                    step = "1" 
+                                    min = "0" 
+                                    max = "100" 
+                                    className = "rangeLevel" 
+                                    style={{ background: `linear-gradient(to right, rgb(166, 255, 166) ${a.level - 4}%, white ${a.level}%)`, }}
+                                    readOnly 
+                                    />
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            )
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Navbar />
+                    <Languages />
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+
+    <script src = "script.js"></script>
+
+</body>
+</html>
