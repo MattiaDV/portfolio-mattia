@@ -73,10 +73,12 @@ body, html {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    gap: 10px;
 }
 
 .titleEx {
-    color: rgb(100, 100, 100) !important;
+    color: rgb(15, 15, 15) !important;
+    font-weight: 600 !important;
 }
 
 .experience details summary {
@@ -85,7 +87,7 @@ body, html {
 }
 
 .experience details span {
-    color: #c1c1c1;
+    color: #383838;
     font-size: 18px;
 }
 
@@ -161,6 +163,7 @@ input[type = "range"]::-webkit-slider-thumb {
     color: white;
     padding: 20px;
     border-radius: 25px;
+    text-align: center;
 }
 
 .AllPartFronEnd h1 {
@@ -178,7 +181,8 @@ input[type = "range"]::-webkit-slider-thumb {
     min-width: 30%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0px 4px 16px var(--shadow);
+    border: 1px solid var(--weight-gray);
+    box-shadow: 0px 4px 16px var(--weight-gray);
 }
 
 .footer {
@@ -189,6 +193,21 @@ input[type = "range"]::-webkit-slider-thumb {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.titlePageName {
+    font-size: 24px !important; 
+    font-weight: 600 !important;
+}
+
+.titlePageDate {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+}
+
+.titlePageDesc {
+    font-size: 20px !important;
+    font-weight: 400 !important;
 }
 
 @media screen and (max-width: 600px) {
@@ -221,5 +240,20 @@ input[type = "range"]::-webkit-slider-thumb {
 
     body, html {
         overflow-x: hidden;
+    }
+
+    .titlePageName {
+        font-size: 16px !important; 
+        font-weight: 600 !important;
+    }
+    
+    .titlePageDate {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+    }
+    
+    .titlePageDesc {
+        font-size: 14px !important;
+        font-weight: 400 !important;
     }
 }

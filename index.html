@@ -81,9 +81,9 @@
             return (
                 <div className = "fotoPersonale">
                     <div className = "PersonalDatas">
-                        <span className = "titlePage">Mattia De Vincentis</span>
-                        <span className = "titlePage">25/01/2005</span>
-                        <span className = "titlePage">4 Anni nel settore della programmazione di siti web</span>
+                        <span className = "titlePageName">Mattia De Vincentis</span>
+                        <span className = "titlePageDate">25/01/2005</span>
+                        <span className = "titlePageDesc">4 Anni nel settore della programmazione di siti web</span>
                     </div>
                     <img 
                         src = "./img/foto.jpg"
@@ -122,6 +122,7 @@
                             lang.map(a => (
                                 <div className = "cardLang">
                                     {a.logo}
+                                    {a.name}
                                     <span className = "descriptionLang">{a.description}</span>
                                     <input 
                                     type = "range" 
@@ -165,6 +166,7 @@
                             lang.map(a => (
                                 <div className = "cardLang">
                                     {a.logo}
+                                    {a.name}
                                     <span className = "descriptionLang">{a.description}</span>
                                     <input 
                                     type = "range" 
@@ -220,6 +222,7 @@
                             lang.map(a => (
                                 <div className = "cardLang">
                                     {a.logo}
+                                    {a.name}
                                     <span className = "descriptionLang">{a.description}</span>
                                     <input 
                                     type = "range" 
@@ -235,6 +238,43 @@
                             ))
                         }
                     </div>
+                </div>
+            )
+        }
+
+        function Formazione() {
+            let form = [
+                {
+                    name: "Istituto superiore Informatico",
+                    luogo: "Nuoro",
+                    specializazzione: "Informatica",
+                    titolo: "Perito informatico",
+                    votoFinale: "77/100",
+                },
+                {
+                    name: "Digital Marketing Specialist (Master)",
+                    luogo: "E-Campus",
+                    specializazzione: "Marketing digitale",
+                    titolo: "Digital Marketer",
+                    votoFinale: "60/60",
+                }
+            ];
+
+            return (
+                <div className = "experienceWork">
+                    {
+                        form.map(ex => (
+                            <div className = "experience">
+                                <details>
+                                    <summary>{ex.name}</summary>
+                                    <span className = "expDet"><span className = "titleEx">SPECIALIZAZZIONE:</span> {ex.specializazzione}</span><br />
+                                    <span className = "expOcc"><span className = "titleEx">TITOLO:</span> {ex.titolo}</span><br />
+                                    <span className = "expSta"><span className = "titleEx">LUOGO:</span> {ex.luogo}</span><br />
+                                    <span className = "expSta"><span className = "titleEx">VOTO FINALE:</span> {ex.votoFinale}</span><br />
+                                </details>
+                            </div>
+                        ))
+                    }
                 </div>
             )
         }
@@ -285,6 +325,7 @@
                     <Languages />
                     <FrameWork />
                     <BackEnd />
+                    <Formazione />
                     <ContactMe />
                 </div>
             );
