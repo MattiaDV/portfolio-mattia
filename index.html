@@ -279,6 +279,50 @@
             )
         }
 
+        function PersonalProject() {
+            let project = [
+                {
+                    name: "DeeBrain",
+                    desc: "FrontEnd & BackEnd",
+                    link: 'http://app.deebrain.it/',
+                },
+                {
+                    name: "IfThenElse Agency",
+                    desc: "FrontEnd project",
+                    link: "https://ifthenelse-agency.netlify.app/",
+                },
+                {
+                    name: "IMPINO",
+                    desc: "FrontEnd project",
+                    link: "https://impino.netlify.app/",
+                },
+                {
+                    name: "SECRET",
+                    desc: "FrontEnd project",
+                    link: "https://secret-app-for-users.netlify.app/",
+                },
+                {
+                    name: "TicTacToe",
+                    desc: "FrontEnd project",
+                    link: "https://tictactoe-mattiadv.netlify.app/game.html",
+                }
+            ];
+
+            return (
+                <div className = "cardProject">
+                    {
+                        project.map(p => (
+                            <div className = "cardPro">
+                                <span className = "Project name"><span className = "titleEx">NOME PROGETTO: </span>{p.name}</span>
+                                <span className = "Project name"><span className = "titleEx">DESCRIZIONE: </span>{p.desc}</span>
+                                <span className = "Project nameLink" onClick={() => window.open(p.link, '_blank')}>VIEW MORE</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            )
+        }
+
         function ContactMe() {
             let social = [
                 {
@@ -326,6 +370,7 @@
                     <FrameWork />
                     <BackEnd />
                     <Formazione />
+                    <PersonalProject />
                     <ContactMe />
                 </div>
             );
