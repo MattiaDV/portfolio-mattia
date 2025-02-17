@@ -6,12 +6,12 @@
 }
 
 :root {
-    --color-white: white;
-    --color-gray: #303030;
-    --background-page: #424242;
-    --shadow: #747474;
+    --color-white: rgb(22, 22, 22);
+    --color-gray: #008311;
+    --background-page: #fffdfd;
+    --shadow: #eeeeee;
     --green: rgb(166, 255, 166);
-    --weight-gray: #272727;
+    --weight-gray: #c4c4c4;
 }
 
 body, html {
@@ -74,11 +74,22 @@ body, html {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
+    transition: 0.5s;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.experience details[open] {
+    max-height: 300px;
 }
 
 .titleEx {
-    color: rgb(15, 15, 15) !important;
+    color: rgb(238, 238, 238) !important;
     font-weight: 600 !important;
+}
+
+.Project {
+    color: #afafaf;
 }
 
 .experience details summary {
@@ -87,7 +98,7 @@ body, html {
 }
 
 .experience details span {
-    color: #383838;
+    color: var(--weight-gray);
     font-size: 18px;
 }
 
@@ -98,6 +109,7 @@ body, html {
 
 .objectNavbar {
     list-style: none;
+    margin-bottom: 0px;
 }
 
 .cardLang {
@@ -166,9 +178,21 @@ input[type = "range"]::-webkit-slider-thumb {
     text-align: center;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+  
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}  
+
 .AllPartFronEnd h1 {
     font-size: 32px;
     font-weight: 600;
+    color: var(--color-white);
 }
 
 .fotoPersonale {
@@ -177,12 +201,19 @@ input[type = "range"]::-webkit-slider-thumb {
     margin-bottom: 10px;
 }
 
-.fotoPersonale img {
-    min-width: 30%;
-    height: auto;
+.imagePersonal {
     border-radius: 50%;
-    border: 1px solid var(--weight-gray);
-    box-shadow: 0px 4px 16px var(--weight-gray);
+    object-fit: cover;
+    opacity: 0; /* Inizia trasparente */
+    transform: scale(10) translateX(-200px); /* Inizia piccola */
+    transition: opacity 1s ease, transform 1s ease; /* Animazione smooth */
+    box-shadow: 0px 4px 16px var(--color-gray);
+}
+
+/* Classe aggiunta durante l'animazione */
+.imagePersonal-active {
+    opacity: 1; /* Diventa visibile */
+    transform: scale(1); /* Ridimensiona all'originale */
 }
 
 .footer {
@@ -238,7 +269,7 @@ input[type = "range"]::-webkit-slider-thumb {
     max-width: 90%;
     margin: 0 auto;
     padding: 10px;
-    background: white;
+    box-shadow: 0px 4px 16px var(--weight-gray);
     margin-top: 20px;
     border-radius: 26px;
 }
@@ -251,7 +282,7 @@ input[type = "range"]::-webkit-slider-thumb {
     background: var(--green);
     padding: 20px;
     border-radius: 26px;
-    color: white;
+    color: var(--color-white);
     font-weight: 800;
     box-shadow: 0px 2px 8px var(--color-gray);
 }
