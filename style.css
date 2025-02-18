@@ -68,7 +68,8 @@ body, html {
 .experience {
     width: 100%;
     padding: 20px;
-    background: var(--color-white);
+    background: var(--background-page);
+    box-shadow: 0px 4px 16px var(--weight-gray);
     border-radius: 26px;
 }
 
@@ -88,22 +89,35 @@ body, html {
 }
 
 .titleEx {
-    color: rgb(238, 238, 238) !important;
+    color: var(--color-white) !important;
     font-weight: 600 !important;
 }
 
 .Project {
-    color: #afafaf;
+    color: rgb(15, 15, 15);
 }
 
 .experience details summary {
     font-size: 24px;
-    color: var(--color-gray);
+    color: var(--color-white);
 }
 
 .experience details span {
-    color: var(--weight-gray);
+    color: rgb(100, 100, 100);
     font-size: 18px;
+}
+
+.iperText {
+    font-size: 42px;
+    font-weight: 800;
+    max-width: 100%;
+    color: var(--color-white) !important;
+    text-align: center;
+}
+
+.nameN {
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .titlePage {
@@ -191,13 +205,7 @@ input[type = "range"]::-webkit-slider-thumb {
 .visible {
     opacity: 1;
     transform: translateY(0);
-}  
-
-.AllPartFronEnd h1 {
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--color-white);
-}
+} 
 
 .fotoPersonale {
     max-width: 100%;
@@ -261,7 +269,9 @@ input[type = "range"]::-webkit-slider-thumb {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background: var(--color-white);
+    background: var(--background-page);
+    color: rgb(15, 15, 15) !important;
+    box-shadow: 0px 4px 16px var(--color-white);
     border-radius: 26px;
     max-width: 90%;
     min-width: 90%;
