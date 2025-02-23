@@ -1,0 +1,452 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --marrone: #984D38;
+    --blu: #181E41;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.typing {
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(20, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body, html {
+    background: linear-gradient(to left, var(--blu), var(--marrone))
+}
+
+.firstSection {
+    height: 100vh;
+    position: relative;
+}
+
+.navbarPortfolio {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.leftPartNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.accNav {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightPartNav table thead th {
+    width: 100px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.rightPartNav table thead th:hover {
+    color: var(--marrone);
+}
+
+.centerPartSec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.myName {
+    font-size: 72px;
+    font-weight: 500;
+    color: white;    
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.workAs {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.bottomSec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.description {
+    text-align: center;
+    width: 100%;
+}
+
+.bottomSec img {
+    width: 35%;
+    filter: drop-shadow(5px 5px 15px rgba(0, 47, 255, 0.5));
+    position: absolute;
+    bottom: 0;
+}
+
+.midPart {
+    width: 100%;
+    padding: 20px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.accCardCon {
+    width: calc(100% / 5.2);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ScorePart {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.leftPart {
+    width: 35%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: var(--marrone);
+}
+
+.leftPart img {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.rightPart {
+    width: 50%;
+    text-align: left;
+}
+
+.act {
+    width: 100%;
+    text-align: center;
+}
+
+.servicesPart {
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.leftPartServ {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.rightPartServ {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.servCard {
+    width: calc(100% / 1.4);
+    background: white;
+    border-radius: 26px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.servCard .logo svg {
+    padding: 20px;
+    border-radius: 26px;
+}
+
+.a {
+    background: #F0C149;
+}
+
+.b {
+    background: #286F6C;
+}
+
+.c {
+    background: #F26440;
+}
+
+.contactMe {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contCard {
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 26px;
+    color: white;
+    width: 200px;
+}
+
+.workAs {
+    color: rgb(200, 200, 200) !important;
+}
+
+ul li {
+    color: rgb(200, 200, 200);
+}
+
+.logo {
+    border-radius: 26px;;
+}
+
+.contentProject {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    margin-bottom: 20px;
+}
+
+.leftPartPro {
+    width: 45%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rightPartPro {
+    width: 45%;
+}
+
+.projectCard {
+    width: calc(100% / 1.4);
+    background: white;
+    border-radius: 26px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .rightPartNav {
+        display: none;
+    }
+
+    .logo {
+        border-radius: 26px;;
+    }
+
+    .myName {
+        font-size: 32px;
+    }
+
+    .workAs {
+        font-size: 16px;
+    }
+
+    .bottomSec img {
+        width: 100%;
+        filter: drop-shadow(5px 5px 15px rgba(0, 47, 255, 0.5));
+    }
+
+    .midPart {
+        gap: 20px;
+        z-index: 100;
+    }
+
+    .nomeCon {
+        display: none;
+    }
+
+    .accCardCon {
+        width: calc(100% / 7.6);
+    }
+
+    .ScorePart {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .leftPart {
+        width: 100%;
+    }
+
+    .leftPart img {
+        max-width: 100%;
+        display: none;
+    }
+
+    .rightPart {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .servicesPart {
+        flex-direction: column;
+    }
+
+    .leftPartServ {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    ul li {
+        list-style: none;
+        color: rgb(200, 200, 200)
+    }
+
+    .rightPartServ {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .servCard {
+        width: 110%;
+    }
+
+    .act {
+        display: block;
+    }
+
+    * {
+        text-align: center;
+    }
+
+    .contentProject {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .leftPartPro {
+        width: 100%;
+    }
+
+    .rightPartPro {
+        width: 100%;
+    }
+
+    .projectCard {
+        width: 100%;
+    }
+}
