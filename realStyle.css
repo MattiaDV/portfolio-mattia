@@ -294,6 +294,8 @@ a:hover {
 
 .workAs {
     color: rgb(200, 200, 200) !important;
+    width: 100%;
+    text-align: center;
 }
 
 ul li {
