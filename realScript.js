@@ -32,3 +32,25 @@ gsap.utils.toArray(".section").forEach(section => {
         }
     });
 });
+
+
+document.addEventListener("click", createRipple);
+document.addEventListener("touchstart", createRipple);
+
+function createRipple(event) {
+    const ripple = document.createElement("span");
+    ripple.classList.add("ripple");
+
+    // Per gestire tocco su mobile
+    const x = (event.touches ? event.touches[0].clientX : event.clientX);
+    const y = (event.touches ? event.touches[0].clientY : event.clientY);
+
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 700); // Rimuove l'effetto dopo 700ms
+}

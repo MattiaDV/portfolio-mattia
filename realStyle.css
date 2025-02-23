@@ -43,7 +43,7 @@
 }
 
 body, html {
-    background: linear-gradient(to left, var(--blu), var(--marrone))
+    background: linear-gradient(to left, var(--blu), var(--marrone));
 }
 
 .firstSection {
@@ -297,6 +297,24 @@ a:hover {
     color: rgb(200, 200, 200) !important;
     width: 100%;
     text-align: center;
+}
+
+.ripple {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-effect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(20);
+        opacity: 0;
+    }
 }
 
 ul li {
