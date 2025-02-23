@@ -290,6 +290,7 @@ a:hover {
     border-radius: 26px;
     color: white;
     width: 200px;
+    cursor: pointer;
 }
 
 .workAs {
