@@ -56,6 +56,8 @@ function createRipple(event) {
 }
 
 let video = document.querySelector('#videoTap');
+video.controls = false;
+video.autoplay = true;
 
 video.addEventListener('click', function() {
     if (video.muted) {
