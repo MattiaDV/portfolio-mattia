@@ -54,3 +54,13 @@ function createRipple(event) {
         ripple.remove();
     }, 700); // Rimuove l'effetto dopo 700ms
 }
+
+let video = document.querySelector('#videoTap');
+
+video.addEventListener('click', function() {
+    if (video.muted) {
+        video.muted = false;
+    } else {
+        video.muted = true;
+    }
+})
