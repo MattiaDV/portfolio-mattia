@@ -57,6 +57,14 @@ body, html {
     background: linear-gradient(to left, var(--blu), var(--marrone));
 }
 
+.rightPartNav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
 .firstSection {
     height: 90vh;
     position: relative;
@@ -453,10 +461,21 @@ ul li {
     font-size: 25px;
     font-weight: 600;
     cursor: pointer;
+} 
+
+.modeEdit {
+    background: black;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
-    .rightPartNav {
+    .rightPartNav > table {
         display: none;
     }
 
